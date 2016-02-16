@@ -17,10 +17,12 @@ void setup()
 
 void loop()
 {
+  EnableMotors();
   MoveForward(1000);
   MoveBackward(1000);
   MoveClockwise(500);
   MoveCounterclockwise(500);
+  StopMotors();
 
   delay(5000);
 }
