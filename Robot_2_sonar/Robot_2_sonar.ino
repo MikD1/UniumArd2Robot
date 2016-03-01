@@ -13,7 +13,7 @@ void setup()
 
 void loop()
 {
-  int value = sonar.ping();
+  int value = sonar.ping_cm();
   Serial.println(value);
   delay(500);
 }
