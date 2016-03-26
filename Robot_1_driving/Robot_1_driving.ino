@@ -1,9 +1,9 @@
-int ENA = 6;
-int IN1 = 7;
-int IN2 = 8;
-int ENB = 11;
-int IN4 = 10;
-int IN3 = 9;
+int ENA = 3;
+int IN1 = 2;
+int IN2 = 4;
+int ENB = 6;
+int IN3 = 5;
+int IN4 = 7;
 
 void setup()
 {
@@ -17,7 +17,7 @@ void setup()
 
 void loop()
 {
-  EnableMotors();
+  EnableMotors(255, 255);
   MoveForward(1000);
   MoveBackward(1000);
   MoveClockwise(500);
@@ -27,10 +27,10 @@ void loop()
   delay(5000);
 }
 
-void EnableMotors()
+void EnableMotors(int motorASpeed, int motorBSpeed)
 {
-  digitalWrite(ENA, HIGH);
-  digitalWrite(ENB, HIGH);
+  analogWrite(ENA, motorASpeed);
+  analogWrite(ENB, motorBSpeed);
 }
 
 void StopMotors()
