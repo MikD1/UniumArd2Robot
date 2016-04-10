@@ -33,5 +33,6 @@ void loop()
 {
   Lcd.setCursor(0, 1);
   Lcd.print(N);
-  delay(1000);
+  N = N + 1;
+  delay(500);
 }
